@@ -23,11 +23,12 @@
     <a id="app-calc" href="apps/calc/template.html">Calculator</a>
     <a id="app-notepad" href="apps/notepad/template.html" data-content-type="text/*" data-content-name-suffix=".txt,.md,.js,.go,.cc,.h">Notepad</a>
     <a id="app-paint3d" href="apps/paint3d/index.html">Paint3D</a>
+    <a id="app-website" href="apps/website/index.html">WebSite</a>
     <a id="app-console" href="apps/console/console.html" data-wid='debug-console'>Console</a>
     <a id="app-media-selector" href="apps/mediaplayer/template.html#media-selector-template">Storage</a>
     <a id="app-media-player" href="apps/mediaplayer/template.html#media-player-template">MediaPlayer</a>
     <a id="app-vnc" href="apps/vnc/template.html#app-vnc" class='hidden' >VNC Client</a>
-    <a id="app-webrtc-rdp" href="https://binzume.github.io/webrtc-rdp/webxr/">WebRTC RDP</a>
+    <a id="app-webrtc-rdp" href="https://lunran.github.io/webrtc-rdp/webxr/">WebRTC RDP</a>
     <a id="app-vrm" href="apps/vrmviewer/template.html" data-content-type="application/vrm,application/glb,model/gltf-binary" class='hidden'>VRM Viewer</a>
     <a id="app-vrm-control-panel" href="apps/vrmviewer/template.html#app-vrm-control-panel" data-wid='vrm-control-panel'>VRM ControlPanel</a>
     <a id="app-game001" href="apps/game001/template.html">Game001</a>
@@ -45,10 +46,10 @@
 
   <!-- menu pane -->
   <script type='text/html' id="main-menu-template">
-    <a-xywindow main-menu xywindow="background:true" position="0 0.5 -0.8" title="Menu" width="5" height="1.8" scale="0.15 0.15 0.15" xycontainer="direction:column;spacing:0.05">
+    <a-xywindow main-menu xywindow="background:true" position="0 1 -1.5" title="Menu" width="5" height="1.8" scale="0.15 0.15 0.15" xycontainer="direction:column;spacing:0.05">
       <a-xycontainer width="5" height="0.6" direction="row" align-items="stretch" justify-items="stretch" spacing="0.05">
         <a-xybutton label="Apps" width="1" launch-on-click="appid:applist"></a-xybutton>
-        <a-xybutton label="Storage" width="1" launch-on-click="appid:app-media-selector"></a-xybutton>
+        <a-xybutton label="RDP" width="1" launch-on-click="appid:app-webrtc-rdp"></a-xybutton>
         <a-xybutton label="Console" width="1" launch-on-click="appid:app-console"></a-xybutton>
         <a-xybutton name="exitVRButton" label="Exit" width="1"></a-xybutton>
       </a-xycontainer>
@@ -85,7 +86,7 @@
     <a-assets></a-assets>
 
     <a-entity id='env'>
-      <a-plane wireframe='true' width='10' height='10' segments-height='10' segments-width='10' rotation='90 0 0' color="#aaaaaa"></a-plane>
+      <a-plane wireframe='true' width='10' height='10' segments-height='6' segments-width='6' rotation='90 0 0' color="#aaaaaa"></a-plane>
     </a-entity>
 
     <a-entity id="camera-rig" position-controls="axismove:x" camera-control>
@@ -100,7 +101,7 @@
   </a-scene>
 
   <div style="position:absolute;top:10pt;right:10pt;width:60pt;background-color:white;border-radius:4pt;text-align:center;">
-    <a href="https://github.com/binzume/vr-workspace">GitHub</a>
+    <a href="https://github.com/lunran/vr-workspace">GitHub</a>
   </div>
   <div style="position:absolute;top:10pt;right:80pt;width:100pt;background-color:white;border-radius:4pt;text-align:center;">
     <a href="storage/settings.html">Storage Manager</a>

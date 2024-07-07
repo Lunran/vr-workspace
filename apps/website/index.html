@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>WebSite</title>
+  <script id='script-aframe' src="https://binzume.github.io/aframe/dist/aframe-master.min.js"></script>
+</head>
+
+<body style="background-color: black; color:white;">
+  <a-scene>
+    <a-entity cursor="rayOrigin: mouse; fuse:false" raycaster="objects:.collidable">
+
+    <a-assets>
+        <a-asset-item id="model" crossorigin="anonymous" src="https://binzume.github.io/demo-assets/models/ReadingCafe.glb"></a-asset-item>
+    </a-assets>
+    <a-gltf-model id="app" src="#model"></a-gltf-model>
+
+    <a-entity id="camera-rig" position-controls="arrowkeys:rotation;wasdkeys:translation">
+      <a-camera position="0 1.5 0" look-controls="enabled:false"></a-camera>
+      <a-entity laser-controls="hand: right" raycaster="far:Infinity;objects:.collidable" line="color: #3060a0; opacity: 0.5"></a-entity>
+      <a-entity laser-controls="hand: left" raycaster="far:Infinity;objects:.collidable" line="color: #3060a0; opacity: 0.5"></a-entity>
+    </a-entity>
+
+  </a-scene>
+</body>
+
+</html>
